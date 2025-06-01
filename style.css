@@ -1,0 +1,18 @@
+body {
+    background-image: radial-gradient(circle, rgb(0, 77, 154), rgb(7, 3, 91));
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 0px 0px 29px rgb(170, 202, 255);
+    margin-bottom: 500px;
+    margin-top: 100px;
+}
+section {
+    background-color: rgb(107, 150, 194);
+    width: 500px;
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 5px 10px;
+}
