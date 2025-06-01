@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC e TDEE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</head>
+<body>
+    <h1>Calcular IMC</h1>
+    <section>
+        <div>
+            <p>
+                Qual seu peso?
+            </p>
+            <p><input type="number" name="peso" id="peso"></p>
+            <p>
+                Qual a sua altura em cm?
+            </p>
+            <p><input type="number" name="altura" id="altura"></p>
+            <p><input type="button" value="Calcular" onclick="imc()"></p>
+        </div>
+        <div id="resultado">
+        </div>
+        <div id="resto">
+
+        </div>
+    </section>
+    <h1>Calcular TDEE</h1>
+    <section>
+        <div>
+            <p>
+                Qual seu peso?
+            </p>
+            <p><input type="number" name="peso1" id="peso1"></p>
+            <p>
+                Qual a sua altura em cm?
+            </p>
+            <p><input type="number" name="altura1" id="altura1"></p>
+            <p>
+                Qual a sua idade?
+            </p>
+            <p><input type="number" name="idade" id="idade"></p>
+            <p>
+                Como você se identifica?
+            </p>
+            <p>
+                <select name="sexo" id="sexo">
+                <option value="" disabled selected hidden>Selecione uma opção</option>
+                <option value="homem">Homem</option>
+                <option value="mulher">Mulher</option>
+                </select>
+            </p>
+            <p>
+                Qual o seu tipo de gasto calórico semanal?
+            </p>
+            <p>
+                <select name="calorias" id="calorias">
+                <option value="" disabled selected hidden>Selecione uma opção</option>
+                <option value="sed">Sedentário (Sem Exercício)</option>
+                <option value="leve">Levemente Ativo (1-3x/sem)</option>
+                <option value="moder">Moderadamente Ativo (3-5x/sem)</option>
+                <option value="muito">Muito Ativo (6-7x/sem)</option>
+                <option value="ext">Extremamente Ativo (2x/dia)</option>
+                </select>
+            </p>
+            <p><input type="button" value="Calcular" onclick="tdee()"></p>
+        </div>
+        <div id="result">
+
+        </div>
+    </section>
+    <footer>
+        <p>@liviavm</p>
+    </footer>
+</body>
+</html>
