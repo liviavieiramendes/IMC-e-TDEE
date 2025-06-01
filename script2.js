@@ -7,8 +7,8 @@ function tdee() {
     const resultado = document.getElementById("result");
 
     // Validar os dados inseridos
-    if (isNaN(peso) || isNaN(alturaCm) || isNaN(idade) || !sexo || !atividade) {
-        resultado.innerHTML = "Preencha todos os campos corretamente.";
+    if (!peso || !alturaCm || !idade || !sexo || !atividade || peso < 0 ||alturaCm < 0 || idade < 0  ) {
+        window.alert('Por favor, preencha os campos corretamente.')
         return;
     }
 
