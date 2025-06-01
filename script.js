@@ -3,7 +3,7 @@ function imc(){
     const al = document.getElementById("altura").value
 
     //Validar os dados inseridos
-    if (peso.trim().length == 0 || al.trim().length == 0){
+    if (peso.trim().length == 0 || al.trim().length == 0 || peso <= 0 || altu <= 0){
         window.alert('Por favor, preencha os dados corretamente.')
         peso.value = ""
         altu.value = ""
