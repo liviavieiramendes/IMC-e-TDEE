@@ -1,12 +1,12 @@
 function imc(){
     const peso = document.getElementById("peso").value
     const al = document.getElementById("altura").value
+    const resto = document.getElementById("resto")
+    const resultado = document.getElementById("resultado")
 
     //Validar os dados inseridos
-    if (!peso || !al || peso < 0 || altu < 0){
+    if ( !peso || !al || peso < 0 || al < 0){
         window.alert('Por favor, preencha os dados corretamente.')
-        peso.value = ""
-        altu.value = ""
         return
     }
     
