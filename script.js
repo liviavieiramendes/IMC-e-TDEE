@@ -1,16 +1,14 @@
 function imc(){
-    const peso = document.getElementById("peso").value
-    const al = document.getElementById("altura").value
-    const resto = document.getElementById("resto")
-    const resultado = document.getElementById("resultado")
+    const peso = parseFloat(document.getElementById("peso").value);
+    const altu = parseFloat(document.getElementById("altura").value);
 
-    //Validar os dados inseridos
-    if ( !peso || !al || peso < 0 || al < 0){
-        window.alert('Por favor, preencha os dados corretamente.')
-        return
-    }
+    //Validar infos inseridas
+    if (isNaN(peso) || isNaN(altu) || peso <= 0 || altu <= 0){
+        window.alert('Por favor, preencha os dados corretamente.');
+        return;
+    } 
     
-    const altura = al / 100; // Converter cm para metros
+    const altura = altu / 100; // Converter cm para metros
     const i = peso / (altura * altura);
     const imc = i.toFixed(2); // Arredonda para 2 casas decimais
 
