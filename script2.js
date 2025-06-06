@@ -6,14 +6,11 @@ function tdee() {
     const atividade = document.getElementById("calorias").value;
     const resultado = document.getElementById("result");
 
-    // Validar os dados inseridos
-    if (!peso || !alturaCm || !idade || !sexo || !atividade || peso < 0 ||alturaCm < 0 || idade < 0  ) {
-        window.alert('Por favor, preencha os campos corretamente.')
+    // Validar infos inseridas
+    if (isNaN(peso) || isNaN(alturaCm) || isNaN(idade) || peso <= 0 || alturaCm <= 0 || idade <= 0 || !sexo || !atividade) {
+        resultado.innerHTML = "<p style='color:red'>Preencha todos os campos corretamente!</p>";
         return;
     }
-
-    // Converter altura de cm para metros
-    const alturaM = alturaCm / 100;
 
     let tmb;
     if (sexo === "homem") {
@@ -31,7 +28,7 @@ function tdee() {
         'ext': 1.9
     };
     
-    const fator = fatores[atividade] || 1.2; // Caso a atividade não dê certo
+    const fator = fatores[atividade] || 1.2; // Usa 1.2 se atividade for inválida
 
     const tdee = tmb * fator;
 
